@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "0.8"
+before_install:
+  # Using PhantomJS (Headless browser testing on travis-ci.org)
+  # http://about.travis-ci.org/docs/user/gui-and-headless-browsers/#Using-PhantomJS
+  # http://phantomjs.org/
+  - phantomjs --webdriver=localhost:8910 | bash &> phantomjs.log
+
+  # Run tests completely in the cloud using Travis CI and Sauce Labs
+  # https://saucelabs.com/opensource/travis
+  # http://saucelabs.com/downloads/Sauce-Connect-latest.zip
+  - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash &> sauce_connect_setup.log
+before_script:
+  - npm test
+script:
+  - testem ci -P 3 -f testem.yml --port 8080
+  - browserNameSL='ipad'              versionSL='6'  platformSL='OS X 10.8' grunt
+  - browserNameSL='firefox'           versionSL='24' platformSL='Linux' grunt
+  - browserNameSL='chrome'            versionSL=''   platformSL='Linux' grunt
+  - browserNameSL='internet explorer' versionSL='10' platformSL='Windows 8' grunt
+
+# Run tests using Travis CI and Sauce Labs
+# https://saucelabs.com/opensource/travis
+#
+# Secure environment variables
+# http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables
+env:
+  global:
+    - secure: "GIMaIdIdu4dWXJdNNCvZ36irHGQLebRbqllHG8bpCR1W6ZvV06bYLOmnAjKGKXQkVopRTBB7jWqOZojWjl13rZNF4hT5PZJSQL8vlSeCBT1WotYOZ/n/twHBq1XWyrH5Pqg++/G9JZMW1WVrDLDhC4JmqWOr7jotF25mIBjKBi4="
+    - secure: "O4U76bEyuPZXsJwiIOhT5sIAD2QFa164Uku1MMT703OiR8jSgH8lPtXz34uopYI4EXLuWT1vyXn5ksuVzpIWQWLOI8OX9Ulv/k2wnuQPn8RQBfx0mcqr4ZE3fXsJgzCN80GgONMVhHO2ub6jJPl6PGJ/MGly57UFOyOU8DfN8FY="
