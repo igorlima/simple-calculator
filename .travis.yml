@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.8"
+  - "0.10"
 before_install:
   # Using PhantomJS (Headless browser testing on travis-ci.org)
   # http://about.travis-ci.org/docs/user/gui-and-headless-browsers/#Using-PhantomJS
