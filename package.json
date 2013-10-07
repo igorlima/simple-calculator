@@ -22,7 +22,7 @@
     "grunt-contrib-connect": "0.5.0"
   },
   "scripts": {
-    "preinstall": "npm install -g grunt-cli",
+    "preinstall": "npm install -g grunt-cli testem vows",
     "test": "grunt"
   }
 }
