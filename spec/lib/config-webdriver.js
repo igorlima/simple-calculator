@@ -9,7 +9,7 @@ var exports   = module.exports = {},
       "name"       : "Teste de interface da 5a etapa",
       "public"     : "public",
       "build"      : process.env.TRAVIS_BUILD_NUMBER || "dev-build",
-      "tunnel-identifier": "minicurso",
+      "tunnel-identifier": process.env.TRAVIS_JOB_NUMBER || "minicurso",
       "record-video": true
     },
 
