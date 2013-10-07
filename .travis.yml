@@ -29,3 +29,15 @@ env:
   global:
     - secure: "GIMaIdIdu4dWXJdNNCvZ36irHGQLebRbqllHG8bpCR1W6ZvV06bYLOmnAjKGKXQkVopRTBB7jWqOZojWjl13rZNF4hT5PZJSQL8vlSeCBT1WotYOZ/n/twHBq1XWyrH5Pqg++/G9JZMW1WVrDLDhC4JmqWOr7jotF25mIBjKBi4="
     - secure: "O4U76bEyuPZXsJwiIOhT5sIAD2QFa164Uku1MMT703OiR8jSgH8lPtXz34uopYI4EXLuWT1vyXn5ksuVzpIWQWLOI8OX9Ulv/k2wnuQPn8RQBfx0mcqr4ZE3fXsJgzCN80GgONMVhHO2ub6jJPl6PGJ/MGly57UFOyOU8DfN8FY="
+
+# Introducing Continuous Deployment to Heroku
+# http://about.travis-ci.org/blog/2013-07-09-introducing-continuous-deployment-to-heroku/
+# http://about.travis-ci.org/docs/user/deployment/heroku/
+#
+# Getting Started with Node.js on Heroku
+# https://devcenter.heroku.com/articles/getting-started-with-nodejs
+deploy:
+  provider: heroku
+  app: simple-calculator # optional if it's the same as your repo name
+  api_key:
+    secure: R7oh9D5YDdEOcTSUgIGD2I+WhmtwVjLonb43Cv/N9mtKjXzXXLdNa25O/Xe7i6Hj9CsKg0wiz5vuwLTpXJN1qC+BUek4Xd8m+fRRz9OvUbiEnl93s8PelR/KO/jfNqdbQzmCdx6GvfLKk5DRyTRL+i4o4pAdWwDM3jSh78hWKXc=
