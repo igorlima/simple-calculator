@@ -5,7 +5,7 @@ before_install:
   # Using PhantomJS (Headless browser testing on travis-ci.org)
   # http://about.travis-ci.org/docs/user/gui-and-headless-browsers/#Using-PhantomJS
   # http://phantomjs.org/
-  - phantomjs --webdriver=localhost:8910 | bash &> phantomjs.log
+  - phantomjs --webdriver=localhost:8910 &> phantomjs.log &
 
   # Run tests completely in the cloud using Travis CI and Sauce Labs
   # https://saucelabs.com/opensource/travis
