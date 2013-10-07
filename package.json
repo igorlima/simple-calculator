@@ -1,13 +1,14 @@
 {
-  "author": {
-    "name": "Igor Ribeiro Lima",
-    "email": "lima.igorribeiro@gmail.com",
-    "website": "http://github.com/igorlima"
-  },
+  "name": "simple-calculator",
   "version": "0.0.1",
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
+  },
+  "author": {
+    "name": "Igor Ribeiro Lima",
+    "email": "lima.igorribeiro@gmail.com",
+    "website": "http://github.com/igorlima"
   },
   "devDependencies": {
     "grunt": "0.4.1",
