@@ -12,7 +12,7 @@ launchers:
     command: browserNameSL='internet explorer' versionSL='9' platformSL='Windows 7' node spec/lib/saucelauncher-webdriver.js
 
   Win8_IE_10:
-    command: browserNameSL='internet explorer' versionSL='10' platformSL='Windows 8' node spec/lib/saucelauncher-webdriver.js
+    command: browserNameSL='internet explorer' versionSL='6' platformSL='Windows XP' node spec/lib/saucelauncher-webdriver.js
 
   iPhone:
     command: browserNameSL='iphone' versionSL='6' platformSL='OS X 10.8' node spec/lib/saucelauncher-webdriver.js
