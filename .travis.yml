@@ -12,6 +12,7 @@ before_install:
   # http://saucelabs.com/downloads/Sauce-Connect-latest.zip
   - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash &> sauce_connect_setup.log
 before_script:
+  - npm install -g grunt-cli testem vows
   - npm test
 script:
   - testem ci -P 3 -f testem.yml --port 8080
